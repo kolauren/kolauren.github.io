@@ -22,10 +22,11 @@ html, body {
     width: 40%;
     max-width: 650px;
     min-width: 400px;
+    min-height: 400px;
     height: 100%;
     background-color: #FFFFFF;
     opacity: 0.85;
-    padding: 5px 15px;
+    padding: 5px 30px;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -33,7 +34,7 @@ html, body {
 
 ul {
     padding: 0;
-    margin: 1em;
+    margin: 1em 0;
     list-style-type: none;
 }
 
@@ -59,10 +60,13 @@ a:hover {
 }
 
 @media (max-width: 800px) {
+
     #main {
         margin: 0;
-        width: 400px;
-        font-size: 22px;
+        width: 100%;
+        max-width: none;
+        min-width: none;
+        font-size: 20px;
     }
 
     h1 {
@@ -70,12 +74,12 @@ a:hover {
     }
 }
 
-@media (max-width: 480px) {
-    #main {
-        font-size: 16px;
-    }
-
-    h1 {
-        font-size: 20px;
+@media (max-width: 500px) {
+    html {
+        background-position: right bottom;
+        -webkit-background-size: auto 100%;
+        -moz-background-size: auto 100%;
+        -o-background-size: auto 100%;
+        background-size: auto 100%;
     }
 }
