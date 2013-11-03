@@ -1,0 +1,81 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300);
+
+html {
+    background: url(../img/background.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: "Open Sans", sans-serif;
+    font-size: 22px;
+    font-weight: 300;
+}
+
+#main {
+    margin-left: 15%;
+    width: 40%;
+    max-width: 650px;
+    min-width: 400px;
+    height: 100%;
+    background-color: #FFFFFF;
+    opacity: 0.85;
+    padding: 5px 15px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+ul {
+    padding: 0;
+    margin: 1em;
+    list-style-type: none;
+}
+
+li {
+    margin: 1em 0;
+}
+
+h1 {
+    padding: 0;
+    margin: 0.5em 0 0 0;
+    font-size: 48px;
+}
+
+a, a:link, a:visited {
+    color: #000000;
+    text-decoration: none;
+    border-bottom: 1px dotted #000000;
+}
+
+a:hover {
+    color: #CE38CD;
+    border-bottom: 1px dotted #CE38CD;
+}
+
+@media (max-width: 800px) {
+    #main {
+        margin: 0;
+        width: 400px;
+        font-size: 22px;
+    }
+
+    h1 {
+        font-size: 36px;
+    }
+}
+
+@media (max-width: 480px) {
+    #main {
+        font-size: 16px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+}
