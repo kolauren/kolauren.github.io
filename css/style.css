@@ -1,4 +1,3 @@
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300);
 @import url(http://fonts.googleapis.com/css?family=Noto+Serif);
 
 html {
@@ -18,14 +17,14 @@ html, body {
 #main {
     margin-left: 15%;
     width: 600px;
-    min-height: 400px;
+    min-height: 650px;
     height: 100%;
     background-color: rgba(255, 255, 255, 0.5);
     padding: 5px 30px;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    z-index: 1000000;
+    z-index: 1;
     position: relative;
 }
 
