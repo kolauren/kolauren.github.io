@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Noto+Serif);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,600);
 
 html {
     background-color: #FFFFFF;
@@ -8,7 +8,7 @@ html, body {
     margin: 0;
     padding: 0;
     height: 100%;
-    font-family: "Noto Serif", serif;
+    font-family: "Open Sans", sans-serif;
     font-size: 1em;
     font-weight: 300;
     color: #444444;
@@ -42,6 +42,7 @@ h1 {
     padding: 0;
     margin: 0.5em 0 0 0;
     font-size: 2.2em;
+    font-weight: 400;
 }
 
 a, a:link, a:visited {
@@ -51,8 +52,8 @@ a, a:link, a:visited {
 }
 
 a:hover {
-    color: #D74B37;
-    border-bottom: 1px dotted #D74B37;
+    color: #AAAAAA;
+    border-bottom: 1px dotted #AAAAAA;
 }
 
 @media (max-width: 900px) {
