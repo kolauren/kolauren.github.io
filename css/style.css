@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,600);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,700);
 
 html {
     background-color: #FFFFFF;
@@ -12,14 +12,14 @@ html, body {
     font-size: 1em;
     font-weight: 300;
     color: #444444;
+    text-transform: uppercase;
+    text-align: center;
 }
 
 #main {
-    margin: 1em;
-    width: 600px;
-    min-height: 650px;
+    padding: 1em;
     height: 100%;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: #E2F7FA;
     padding: 5px 30px;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -35,14 +35,15 @@ ul {
 }
 
 li {
-    margin: 1em 0;
+    margin: 1.5em 0;
 }
 
 h1 {
     padding: 0;
-    margin: 0.5em 0 0 0;
+    margin: 1em 0;
     font-size: 2.2em;
-    font-weight: 400;
+    letter-spacing: 0.1em;
+    font-weight: 700;
 }
 
 a, a:link, a:visited {
@@ -56,10 +57,8 @@ a:hover {
     border-bottom: 1px dotted #AAAAAA;
 }
 
-@media (max-width: 900px) {
-
-    #main {
-        margin: 0;
-        width: 100%;
+@media only screen and (min-device-width : 320px) {
+    h1 {
+        font-size: 2em;
     }
 }
