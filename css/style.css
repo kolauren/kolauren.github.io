@@ -1,7 +1,7 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,700);
 
 html {
-    background-color: #FFFFFF;
+    background-color: #F7F4F3;
 }
 
 html, body {
@@ -16,14 +16,10 @@ html, body {
     text-align: center;
 }
 
-#main {
+.main {
     padding: 1em;
     height: 100%;
-    background-color: #E2F7FA;
     padding: 5px 30px;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
     z-index: 1;
     position: relative;
 }
@@ -44,21 +40,80 @@ h1 {
     font-size: 2.2em;
     letter-spacing: 0.1em;
     font-weight: 700;
+    text-shadow: 1px 0 0 #fff, -1px 0 0 #fff, 0 1px 0 #fff, 0 -1px 0 #fff;
 }
 
 a, a:link, a:visited {
+    font-size: 1.5em;
+    font-weight: 700;
     color: #444444;
     text-decoration: none;
-    border-bottom: 1px dotted #000000;
+    text-shadow: 1px 0 0 #fff, -1px 0 0 #fff, 0 1px 0 #fff, 0 -1px 0 #fff;
 }
 
 a:hover {
     color: #AAAAAA;
-    border-bottom: 1px dotted #AAAAAA;
 }
 
-@media only screen and (min-device-width : 320px) {
-    h1 {
-        font-size: 2em;
+.shapes {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    overflow: hidden;
+}
+
+.shape {
+    position: absolute;
+    transition: all 500ms ease-out;
+    width: 200px;
+}
+
+.shape1 {
+    top: 10%;
+    left: 10%;
+    width: 250px;
+}
+
+.shape2 {
+    right: 10%;
+    bottom: 5%;
+    width: 300px;
+}
+
+.shape3 {
+    bottom: -10%;
+    left: 40%;
+    width: 400px;
+}
+
+.shape4 {
+    left: -2%;
+    bottom: -5%;
+    width: 350px;
+}
+
+.shape5 {
+    left: 50%;
+    top: -10%;
+    width: 400px;
+}
+
+.shape6 {
+    right: -5%;
+    top: 25%;
+    width: 150px;
+}
+
+.shape7 {
+    top: 4%;
+    right: 0;
+}
+
+@media (max-width: 600px) {
+    .shape5,
+    .shape2 {
+        display: none;
     }
 }
