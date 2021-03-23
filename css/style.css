@@ -7,48 +7,65 @@ html {
 html, body {
     margin: 0;
     padding: 0;
+    width: 100%;
     height: 100%;
     font-family: "Open Sans", sans-serif;
     font-size: 1em;
     font-weight: 300;
     color: #444444;
-    text-transform: uppercase;
-    text-align: center;
 }
 
 .main {
-    padding: 1em;
     height: 100%;
-    padding: 5px 30px;
+    width: 90%;
+    margin: 0 auto;
+    padding: 1rem 0;
+    box-sizing: border-box;
+    max-width: 800px;
     z-index: 1;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+section {
+    position: relative;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 4rem;
+    box-sizing: border-box;
+    padding: 2rem 4rem; 
 }
 
 ul {
     padding: 0;
-    margin: 1em 0;
+    margin: 1rem 0;
     list-style-type: none;
 }
 
 li {
-    margin: 1.5em 0;
+    margin: 1.5rem 0;
 }
 
 h1 {
-    padding: 0;
-    margin: 1em 0;
-    font-size: 2.2em;
-    letter-spacing: 0.1em;
+    padding: 0 4rem;
+    margin: 0;
+    font-size: 2.2rem;
     font-weight: 700;
     text-shadow: 1px 0 0 #fff, -1px 0 0 #fff, 0 1px 0 #fff, 0 -1px 0 #fff;
 }
 
+h1.second {
+    margin-top: 2rem;
+}
+
 a, a:link, a:visited {
-    font-size: 1.5em;
+    font-size: 1.2rem;
     font-weight: 700;
     color: #444444;
     text-decoration: none;
-    text-shadow: 1px 0 0 #fff, -1px 0 0 #fff, 0 1px 0 #fff, 0 -1px 0 #fff;
 }
 
 a:hover {
@@ -56,18 +73,22 @@ a:hover {
 }
 
 .shapes {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
+    position: fixed;
+    width: 100%;
+    height: 100%;
     overflow: hidden;
+    top: 0;
 }
 
 .shape {
     position: absolute;
     transition: all 500ms ease-out;
     width: 200px;
+}
+
+.shape0 {
+    top: 4%;
+    right: 0;
 }
 
 .shape1 {
@@ -101,19 +122,31 @@ a:hover {
 }
 
 .shape6 {
-    right: -5%;
+    right: -2%;
     top: 25%;
     width: 150px;
 }
 
-.shape7 {
-    top: 4%;
-    right: 0;
+@media (max-width: 600px), (max-height: 812px) {
+    .shape1,
+    .shape2,
+    .shape6,
+    .shape0 {
+        display: none;
+    }
+
+    html, body {
+        height: auto;
+    }
 }
 
-@media (max-width: 600px) {
-    .shape5,
-    .shape2 {
-        display: none;
+@media (max-width: 400px) {
+    h1 {
+        padding: 0 1rem;
+    }
+
+    section {
+        border-radius: 0;
+        padding: 1rem;
     }
 }

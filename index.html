@@ -11,12 +11,19 @@
     </head>
     <body>
         <div class="main">
-            <h1>Lauren Ko</h1>
-            <ul id="links">
-                <li><a href="https://www.linkedin.com/profile/view?id=177779742" target="_blank" title="resume">linkedin</a></li>
-                <li><a href="http://www.twitter.com/kolauren" target="_blank" title="twitter">twitter</a></li>
-                <li><a href="mailto:kolauren@gmail.com" title="email">email</a></li>
-            </ul>
+            <h1>Hello</h1>
+            <section>
+                <p>My name is Lauren Ko and I am a software engineer specializing in front-end development. I am based in Boston, MA and currently work for KAYAK.</p>
+                <p>Most of my experience has been with building scalable single page applications using modern web frameworks. Some technologies I have used include: Typescript, Angular, React and more.</p>
+            </section>
+            <h1 class="second">Contact</h1>
+            <section>
+                <p>Feel free to contact me for my resume.</p>
+                <ul>
+                    <li class="link">&#x2728;<a href="https://www.linkedin.com/profile/view?id=177779742" target="_blank" title="resume">linkedin</a>&#x2728;</li>
+                    <li class="link">&#x2728;<a href="mailto:kolauren@gmail.com" title="email">email</a>&#x2728;</li>
+                </ul>
+            </section>
         </div>
         <div class="shapes">
             <svg 
@@ -74,8 +81,8 @@
                 </g>
             </svg>
             <svg 
-                id="shape7" 
-                class="shape shape7" 
+                id="shape0" 
+                class="shape shape0" 
                 fill="#5DFDCB"
                 viewBox="0 0 438 445" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/">
                 <g transform="matrix(1,0,0,1,-213.207,-93.2302)">
@@ -84,7 +91,6 @@
             </svg>
         </div>
     </body>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
         var _gaq=[['_setAccount','UA-32524752-1'],['_trackPageview']];
         (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
@@ -92,7 +98,7 @@
         s.parentNode.insertBefore(g,s)}(document,'script'));
     </script>
     <script>
-        $(function() {
+        document.addEventListener("DOMContentLoaded", () => {
             function shuffle(array) {
                 let currentIdx = array.length;
                 let temp;
@@ -101,7 +107,6 @@
                 while (currentIdx !== 0) {
                     randomIdx = Math.floor(Math.random() * currentIdx);
                     currentIdx -= 1;
-
                     temp = array[currentIdx];
                     array[currentIdx] = array[randomIdx];
                     array[randomIdx] = temp;
@@ -110,34 +115,29 @@
                 return array;
             }
 
-            function getArray(n) {
-                let array = [];
-
-                for (let i = 1; i <= n; i++) {
-                    array.push(i);
+            function changeColors() {
+                const shuffled = shuffle(colors);
+                for (let i = 0; i < shapeIndices.length; i++) {
+                    document.getElementById(`shape${shapeIndices[i]}`).style.fill = shuffled[i];
                 }
-
-                return array;
             }
 
-            $("#links li a").mouseenter(function() {
-                let colors = [
-                    "#15616D",
-                    "#F7A278",
-                    "#5B2333",
-                    "#F24333",
-                    "#E4959E",
-                    "#004E89",
-                    "#5DFDCB",
-                    "#606C38",
-                    "#363946"
-                ];
-                colors = shuffle(colors);
-                const shapes = getArray(7);
+            const colors = [
+                "#15616D",
+                "#F7A278",
+                "#5B2333",
+                "#F24333",
+                "#E4959E",
+                "#004E89",
+                "#5DFDCB",
+                "#606C38",
+                "#363946"
+            ];
+            const shapeIndices = Array.from(Array(7).keys());
+            const elements = document.getElementsByClassName("link");
 
-                for (let i = 0; i < shapes.length; i++) {
-                    $(`#shape${shapes[i]}`).css({ fill: colors[i] });
-                }
+            Array.from(elements).forEach(element => {
+                element.addEventListener("mouseenter", changeColors);
             });
         });
     </script>
